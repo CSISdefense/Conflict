@@ -1,0 +1,412 @@
+---
+title: "Terrorism"
+author: "Greg Sanders"
+date: "December 10, 2015"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r setup}
+setwd("K:\\Development\\Conflict")
+Path<-"K:\\2007-01 PROFESSIONAL SERVICES\\R scripts and data\\"
+source(paste(Path,"helper.r",sep=""))
+source(paste(Path,"lookups.r",sep=""))
+
+require(plyr)
+require(ggplot2)
+
+load("data//124930_1ucdpnonstate2015.rdata")
+ucdpNonState<-standardize_variable_names(Path,ucdpNonState)
+ucdpNonState<-read_and_join("","UCDPregion.txt",ucdpNonState)
+
+
+load("data//124932_1ucdponesided2015.rdata")
+ucdpOneSided<-standardize_variable_names(Path,ucdpOneSided)
+ucdpOneSided<-read_and_join("","UCDPregion.txt",ucdpOneSided)
+
+
+load("data//124934_1ucdp-brd-conflict-2015.rdata")
+ucdp.brd<-standardize_variable_names(Path,ucdp.brd)
+ucdp.brd$Region<-factor(ucdp.brd$Region)
+ucdp.brd<-read_and_join("","UCDPregion.txt",ucdp.brd)
+
+
+load("data//124920_1ucdp-prio-2015.rdata")
+
+
+
+terrorism.df <- read.csv("data//globalterrorismdb_0615dist.csv")
+terrorism.df<-read_and_join("","STARTregion.txt",terrorism.df)
+terrorism.df<-standardize_variable_names(Path,terrorism.df)
+
+# undebug(read_and_join)
+prio.df <- read.csv("data//PRIO_bd3.0.csv")
+prio.df<-standardize_variable_names(Path,prio.df)
+# prio.df$Region<-factor(prio.df$Region)
+prio.df<-read_and_join("","UCDPregion.txt",prio.df)
+# unique(subset(prio.df,select=c(Region,RegionName)))
+# unique(subset(ucdp.brd,select=c(Region,RegionName)))
+
+# subset(prio.df,select=())
+
+hsr.df <- read.csv("data//d-statebased-battledeaths-country-2007.csv")
+hsr.df<-standardize_variable_names(Path,hsr.df)
+
+hsr.df <- melt(data=hsr.df,id.var=c("Year"),
+               variable.name="Region",
+               value.name="Value")
+hsr.df$Value<-FactorToNumber(as.character(hsr.df$Value))
+hsr.df<-read_and_join("","HSRregion.txt",hsr.df)
+
+
+```
+
+You can also embed plots, for example:
+
+```{r TerrorRegion, echo=FALSE}
+
+#Region
+terrorRegionDyad<-ddply(terrorism.df,
+      .(Year,regionSummary),
+      summarise,
+      Best=sum(nkill,na.rm=TRUE))
+
+ggplot(data=subset(terrorRegionDyad,Year>=1980),
+          aes(x=Year,
+           y=Best
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~regionSummary)
+
+
+#Country
+terrorcountryDyad<-ddply(terrorism.df,
+      .(Year,country_txt,regionSummary),
+      summarise,
+      Best=sum(nkill,na.rm=TRUE))
+
+terrorcountryDyad<-ddply(terrorcountryDyad,
+      .(Year),
+      transform,
+      pAnnual=Best/sum(Best,na.rm=TRUE))
+
+
+terrorcountryDyad$altregion<-as.character(terrorcountryDyad$regionSummary)
+
+ThousandDeaths<-arrange(subset(terrorcountryDyad,Year==2014 & Best>=1000),Best)
+sum(ThousandDeaths$pAnnual)
+
+terrorcountryDyad$altregion[terrorcountryDyad$country_txt  %in% ThousandDeaths$country_txt]<-
+    as.character(terrorcountryDyad$country_txt[terrorcountryDyad$country_txt %in% ThousandDeaths$country_txt])
+
+terrorcountryDyad<-ddply(terrorcountryDyad,
+      .(Year,altregion),
+      summarise,
+      Best=sum(Best,na.rm=TRUE))
+
+ggplot(data=subset(terrorcountryDyad,Year>=1980),
+          aes(x=Year,
+           y=Best
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~altregion)
+
+
+sum(terrorcountryDyad$pAnnual[terrorcountryDyad$country_txt %in% c("Ukraine",
+                                                                     "Afghanistan",
+                                                                     "Pakistan") &
+                                  terrorcountryDyad$Year==2014])
+
+
+sum(terrorcountryDyad$Best[terrorcountryDyad$country_txt %in% c(
+                                                                     "Afghanistan",
+                                                                     "Pakistan") &
+                                  terrorcountryDyad$Year==2014])
+
+
+
+subset(terrorRegionDyad,Year==2014)
+
+
+```
+
+
+```{r brdRegion, echo=FALSE}
+
+prio.brdDyad<-ddply(prio.df,
+      .(Year,Region, RegionName),
+      summarise,
+            Best=sum(bdeadbes,na.rm=TRUE),
+      Low=sum(bdeadlow,na.rm=TRUE),
+      High=sum(bdeadhig,na.rm=TRUE)
+      )
+
+ucdp.brdDyad<-ddply(ucdp.brd,
+      .(Year,Region, RegionName),
+      summarise,
+      Best=sum(BdBest,na.rm=TRUE),
+      Low=sum(BdLow,na.rm=TRUE),
+      High=sum(BdHigh,na.rm=TRUE)
+      )
+
+
+
+
+#Country
+UCDP.BRDcountryDyad<-ddply(ucdp.brd,
+      .(Year,LocationInc,Region, RegionName),
+      summarise,
+      Best=sum(BdBest,na.rm=TRUE),
+      Low=sum(BdLow,na.rm=TRUE),
+      High=sum(BdHigh,na.rm=TRUE)
+      )
+
+UCDP.BRDcountryDyad<-ddply(UCDP.BRDcountryDyad,
+      .(Year),
+      transform,
+      pAnnual=Best/sum(Best,na.rm=TRUE))
+
+
+
+ggplot(data=ucdp.brdDyad,
+          aes(x=Year,
+           y=Best
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)
+
+
+ggplot(data=prio.brdDyad,
+          aes(x=Year,
+           y=Best
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)
+
+
+UCDP.BRDcountryDyad$altregion<-as.character(UCDP.BRDcountryDyad$RegionName)
+
+ThousandDeathsBRD<-arrange(subset(UCDP.BRDcountryDyad,Year==2014 & Best>=1000),Best)
+ThousandDeathsBRD$terrorism1000<-TRUE
+ThousandDeathsBRD$terrorism1000[ThousandDeathsBRD$LocationInc %in% c("Israel","South Sudan")]<-FALSE
+sum(ThousandDeathsBRD$pAnnual)
+sum(ThousandDeathsBRD$pAnnual[ThousandDeathsBRD$terrorism1000==TRUE])
+
+UCDP.BRDcountryDyad$altregion[UCDP.BRDcountryDyad$LocationInc  %in% ThousandDeathsBRD$LocationInc]<-
+    as.character(UCDP.BRDcountryDyad$LocationInc[UCDP.BRDcountryDyad$LocationInc %in% ThousandDeathsBRD$LocationInc])
+
+UCDP.BRDcountryDyad<-ddply(UCDP.BRDcountryDyad,
+      .(Year,altregion),
+      summarise,
+      Best=sum(Best,na.rm=TRUE))
+
+ggplot(data=subset(UCDP.BRDcountryDyad,Year>=1980),
+          aes(x=Year,
+           y=Best
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~altregion)
+
+
+
+```
+
+
+```{r NonStateRegion, echo=FALSE}
+NonStateDyad<-ddply(ucdpNonState,
+      .(Year,Region, RegionName),
+      summarise,
+      Best=sum(bestfatalityestimate,na.rm=TRUE),
+      High=sum(highfatalityestimate,na.rm=TRUE),
+      Low=sum(lowfatalityestimate,na.rm=TRUE)
+      )
+
+
+ggplot(data=NonStateDyad,
+          aes(x=Year,
+           y=Best
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)
+
+```
+
+
+
+```{r OneSided, echo=FALSE}
+OneSidedDyad<-ddply(ucdpOneSided,
+      .(Year,Region, RegionName),
+      summarise,
+      Best=sum(bestfatalityestimate,na.rm=TRUE),
+      High=sum(highfatalityestimate,na.rm=TRUE),
+      Low=sum(lowfatalityestimate,na.rm=TRUE)
+      )
+
+
+ggplot(data=OneSidedDyad,
+          aes(x=Year,
+           y=Best
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)
+
+```
+
+
+
+```{r JointUCDP}
+OneSidedDyad$Series<-"One Sided"
+NonStateDyad$Series<-"Non-State"
+ucdp.brdDyad$Series<-"Battle-Related"
+
+
+Joint<-rbind(OneSidedDyad,NonStateDyad,ucdp.brdDyad)
+
+ucdpDyad<-ddply(Joint,
+      .(Year,Region,RegionName),
+      summarise,
+      Best=sum(Best,na.rm=TRUE),
+      High=sum(High,na.rm=TRUE),
+      Low=sum(Low,na.rm=TRUE)
+      )
+
+ggplot(data=Joint,
+          aes(x=Year,
+           y=Best,
+           color=Series
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)+
+    coord_cartesian(ylim = c(0,100000))
+
+ggplot(data=Joint,
+          aes(x=Year,
+           y=Best,
+           color=Series
+       )
+)+geom_bar(stat="identity")+
+    facet_wrap( ~RegionName)+
+    coord_cartesian(ylim = c(0,100000))
+
+
+ggplot(data=ucdpDyad,
+          aes(x=Year,
+           y=Best
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)+
+    coord_cartesian(ylim = c(0,100000))
+```
+
+```{r JointPRIO.UCDP}
+ucdp.brdDyad$Series<-"Battle-Related"
+prio.brdDyad$Series<-"PRIO Battle-Related"
+
+Joint<-rbind(ucdp.brdDyad,prio.brdDyad)
+colnames(ucdp.brdDyad)
+colnames(prio.brdDyad)
+
+TotalDyad<-ddply(Joint,
+      .(Year,Region,RegionName,Series),
+      summarise,
+      Best=sum(Best,na.rm=TRUE),
+      High=sum(High,na.rm=TRUE),
+      Low=sum(Low,na.rm=TRUE)
+      )
+
+TallTotalDyad<-melt(TotalDyad,
+                    id.vars = c("Year","Region","RegionName","Series"),
+                    value.name = "Value",
+                    variable.name = "Estimate"
+)
+
+TallTotalDyad$SeriesEstimate<-factor(paste(TallTotalDyad$Series,TallTotalDyad$Estimate))
+
+c("Battle-Related Best", 
+"Battle-Related High", 
+"Battle-Related Low",
+"PRIO Battle-Related Best",
+"PRIO Battle-Related High",
+"PRIO Battle-Related Low")
+
+ggplot(data=subset(TallTotalDyad,Year>=1980 &
+                       SeriesEstimate %in% c("Battle-Related Best", 
+                                             # "Battle-Related High", 
+                                             # "Battle-Related Low",
+                                             "PRIO Battle-Related Best"
+                                             # "PRIO Battle-Related High",
+                                             # "PRIO Battle-Related Low"
+                                             )),
+       aes(x=Year,
+           y=Value,
+           color=SeriesEstimate
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)+
+    coord_cartesian(ylim = c(0,100000))
+
+
+
+
+ggplot(data=Joint,
+          aes(x=Year,
+           y=Best,
+           color=Series
+       )
+)+geom_bar(stat="identity")+
+    facet_wrap( ~RegionName)+
+    coord_cartesian(ylim = c(0,100000))
+
+
+ggplot(data=TotalDyad,
+          aes(x=Year,
+           y=Best
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)+
+    coord_cartesian(ylim = c(0,100000))
+```
+
+
+```{r HSR}
+hsr.df$SeriesEstimate<-"Human Security Report"
+
+hsr.df<-ddply(hsr.df,
+              .(Year,RegionName,SeriesEstimate),
+              summarise,
+              Value=sum(Value))
+
+ggplot(data=subset(hsr.df,Year>=1980),
+          aes(x=Year,
+           y=Value
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)+
+    coord_cartesian(ylim = c(0,100000))
+
+colnames(hsr.df)
+
+BRD.Joint<-rbind(hsr.df,subset(TallTotalDyad,select = -c(Series,Estimate,Region)))
+
+ggplot(data=subset(BRD.Joint,Year>=1980 &
+                    SeriesEstimate %in% c("Battle-Related Best", 
+                                             # "Battle-Related High", 
+                                             # "Battle-Related Low",
+                                          "Human Security Report",
+                                             "PRIO Battle-Related Best"
+                                             # "PRIO Battle-Related High",
+                                             # "PRIO Battle-Related Low"
+                                          )),
+          aes(x=Year,
+           y=Value,
+           color=SeriesEstimate
+       )
+)+geom_line(stat="identity")+
+    facet_wrap( ~RegionName)+
+    coord_cartesian(ylim = c(0,100000))
+
+```
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.

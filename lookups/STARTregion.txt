@@ -1,0 +1,13 @@
+region	regionName	regionHRS	regionSummary
+1	 North America	Americas	Rest of World
+2	 Central America & Caribbean	Americas	Rest of World
+3	 South America	Americas	Rest of World
+4	 East Asia	"East Asia, Southeast Asia, & Oceania"	Rest of World
+5	 Southeast Asia	"East Asia, Southeast Asia, & Oceania"	Rest of World
+6	 South Asia	Central & South Asia	Central & South Asia
+7	 Central Asia	Central & South Asia	Central & South Asia
+8	 Western Europe	Europe	Rest of World
+9	 Eastern Europe	Europe	Rest of World
+10	 Middle East & North Africa	Middle East & North Africa	Middle East & North Africa
+11	 Sub-Saharan Africa	Sub-Saharan Africa	Sub-Saharan Africa
+12	 Australasia & Oceania	"East Asia, Southeast Asia, & Oceania"	Rest of World

@@ -1,0 +1,8 @@
+Region	RegionName	StartGWNo	EndGWNo	Notes	RegionSummary
+1	Europe	200	395		Rest of World
+2	Middle East	630	698		Middle East
+3	Asia	700	990		Rest of World
+4	Africa	400	625		Africa
+5	Americas	2	165		Rest of World
+"1, 2, 3, 5"	Americas			"Coalition Invading Iraq, Americas is closest available proxy "	Middle East
+					

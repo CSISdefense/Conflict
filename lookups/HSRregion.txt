@@ -1,0 +1,8 @@
+Region	RegionName	RegionDetail	RegionSummary	RegionSplit
+Sub.Saharan.Africa	Sub-Saharan Africa	Sub-Saharan Africa	Sub-Saharan Africa	Middle East & Africa
+Americas	Americas	Americas	Rest of World	Rest of World
+Central...South.Asia	Asia	Central & South Asia	Central & South Asia	Rest of World
+East...South.East.Asia...Oceania	Asia	"East Asia, Southeast Asia, & Oceania"	Rest of World	Rest of World
+Europe	Europe	Europe	Rest of World	Rest of World
+Middle.East...North.Africa	Middle East & North Africa	Middle East & North Africa	Middle East & North Africa	Middle East & Africa
+East...Southeast.Asia...Oceania	Asia	"East Asia, Southeast Asia, & Oceania"	Rest of World	Rest of World

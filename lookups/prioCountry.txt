@@ -1,0 +1,153 @@
+gwnoloc	location	Region	RegionName	RegionSummary	Notes
+-99750	"Hyderabad, India"	3	Asia	Central & South Asia	
+-99	Hyderabad	3	Asia	Central & South Asia	
+2	United States of America	5	Americas	Central & South Asia	
+40	Cuba	5	Americas	Central & South Asia	
+41	Haiti	5	Americas	Central & South Asia	
+42	Dominican Republic	5	Americas	Central & South Asia	
+52	Trinidad and Tobago	5	Americas	Central & South Asia	
+70	Mexico	5	Americas	Central & South Asia	
+90	Guatemala	5	Americas	Central & South Asia	
+92	El Salvador	5	Americas	Central & South Asia	
+93	Nicaragua	5	Americas	Central & South Asia	
+94	Costa Rica	5	Americas	Central & South Asia	
+95	Panama	5	Americas	Central & South Asia	
+100	Colombia	5	Americas	Central & South Asia	
+101	Venezuela	5	Americas	Central & South Asia	
+115	Surinam	5	Americas	Central & South Asia	
+135	Peru	5	Americas	Central & South Asia	
+145	Bolivia	5	Americas	Central & South Asia	
+150	Paraguay	5	Americas	Central & South Asia	
+155	Chile	5	Americas	Central & South Asia	
+160	Argentina	5	Americas	Central & South Asia	
+165	Uruguay	5	Americas	Central & South Asia	
+200	United Kingdom	1	Europe	Central & South Asia	
+220	France	1	Europe	Central & South Asia	
+230	Spain	1	Europe	Central & South Asia	
+343	Macedonia	1	Europe	Central & South Asia	
+344	Croatia	1	Europe	Central & South Asia	
+345	Yugoslavia (Serbia)	1	Europe	Central & South Asia	
+346	Bosnia and Herzegovina	1	Europe	Central & South Asia	
+350	Greece	1	Europe	Central & South Asia	
+352	Cyprus	1	Europe	Central & South Asia	
+359	Moldova	1	Europe	Central & South Asia	
+360	Rumania	1	Europe	Central & South Asia	
+365	Russia (Soviet Union)	1	Europe	Central & South Asia	
+372	Georgia	1	Europe	Central & South Asia	
+373	Azerbaijan	1	Europe	Central & South Asia	
+404	Guinea-Bissau	4	Africa	Sub-Saharan Africa	
+411	Equatorial Guinea	4	Africa	Sub-Saharan Africa	
+420	Gambia	4	Africa	Sub-Saharan Africa	
+432	Mali	4	Africa	Sub-Saharan Africa	
+433	Senegal	4	Africa	Sub-Saharan Africa	
+435	Mauritania	4	Africa	Sub-Saharan Africa	
+436	Niger	4	Africa	Sub-Saharan Africa	
+437	Cote D’Ivoire	4	Africa	Sub-Saharan Africa	
+438	Guinea	4	Africa	Sub-Saharan Africa	
+439	Burkina Faso	4	Africa	Sub-Saharan Africa	
+450	Liberia	4	Africa	Sub-Saharan Africa	
+451	Sierra Leone	4	Africa	Sub-Saharan Africa	
+452	Ghana	4	Africa	Sub-Saharan Africa	
+461	Togo	4	Africa	Sub-Saharan Africa	
+471	Cameroon	4	Africa	Sub-Saharan Africa	
+475	Nigeria	4	Africa	Sub-Saharan Africa	
+481	Gabon	4	Africa	Sub-Saharan Africa	
+482	Central African Republic	4	Africa	Sub-Saharan Africa	
+483	Chad	4	Africa	Sub-Saharan Africa	
+484	Congo	4	Africa	Sub-Saharan Africa	
+490	Democratic Republic of Congo (Zaire)	4	Africa	Sub-Saharan Africa	
+500	Uganda	4	Africa	Sub-Saharan Africa	
+501	Kenya	4	Africa	Sub-Saharan Africa	
+516	Burundi	4	Africa	Sub-Saharan Africa	
+517	Rwanda	4	Africa	Sub-Saharan Africa	
+520	Somalia	4	Africa	Sub-Saharan Africa	
+522	Djibouti	4	Africa	Sub-Saharan Africa	
+530	Ethiopia	4	Africa	Sub-Saharan Africa	
+531	Eritrea	4	Africa	Sub-Saharan Africa	
+540	Angola	4	Africa	Sub-Saharan Africa	
+541	Mozambique	4	Africa	Sub-Saharan Africa	
+552	"Grenada, United States of America"	5	Americas	Rest of World	
+552	Zimbabwe (Rhodesia)	4	Africa	Sub-Saharan Africa	
+560	South Africa	4	Africa	Sub-Saharan Africa	
+570	Lesotho	4	Africa	Sub-Saharan Africa	
+580	Madagascar	4	Africa	Sub-Saharan Africa	
+581	Comoros	4	Africa	Sub-Saharan Africa	
+600	Morocco	4	Africa	Middle East & North Africa	
+615	Algeria	4	Africa	Middle East & North Africa	
+616	Tunisia	4	Africa	Middle East & North Africa	
+625	Sudan	4	Africa	Sub-Saharan Africa	
+630	Iran	2	Middle East	Middle East & North Africa	
+640	Turkey/Ottoman Empire	2	Middle East	Middle East & North Africa	
+645	Iraq	2	Middle East	Middle East & North Africa	
+651	Egypt	2	Middle East	Middle East & North Africa	
+652	Syria	2	Middle East	Middle East & North Africa	
+660	Lebanon	2	Middle East	Middle East & North Africa	
+666	Israel	2	Middle East	Middle East & North Africa	
+670	Saudi Arabia	2	Middle East	Middle East & North Africa	
+678	North Yemen	2	Middle East	Middle East & North Africa	
+678	Yemen	2	Middle East	Middle East & North Africa	
+680	South Yemen	2	Middle East	Middle East & North Africa	
+698	Oman	2	Middle East	Middle East & North Africa	
+700	Afghanistan	3	Asia	Central & South Asia	
+702	Tajikistan	3	Asia	Central & South Asia	
+704	Uzbekistan	3	Asia	Central & South Asia	
+710	China	3	Asia	Rest of World	
+750	India	3	Asia	Central & South Asia	
+770	Pakistan	3	Asia	Central & South Asia	
+771	Bangladesh	3	Asia	Central & South Asia	
+775	Myanmar	3	Asia	Rest of World	
+780	Sri Lanka (Ceylon)	3	Asia	Central & South Asia	
+790	Nepal	3	Asia	Central & South Asia	
+800	Thailand	3	Asia	Rest of World	
+811	Cambodia	3	Asia	Rest of World	
+812	Laos	3	Asia	Rest of World	
+816	Vietnam	3	Asia	Rest of World	
+817	South Vietnam	3	Asia	Rest of World	
+820	Malaysia	3	Asia	Rest of World	
+835	Brunei	3	Asia	Rest of World	
+840	Philippines	3	Asia	Rest of World	
+850	Indonesia	3	Asia	Rest of World	
+910	Papua New Guinea	3	Asia	Rest of World	
+952	"Panama, United States of America"	5	Americas	Rest of World	
+9193	"Honduras, Nicaragua"	5	Americas	Rest of World	
+9291	"El Salvador, Honduras"	5	Americas	Rest of World	
+130135	"Ecuador, Peru"	5	Americas	Rest of World	
+160200	"Argentina, United Kingdom"	1	Europe	Rest of World	
+220616	"France, Tunisia"	4	Africa	Middle East & North Africa	
+220800	"France, Thailand"	3	Asia	Rest of World	
+310365	"Hungary, Russia (Soviet Union)"	1	Europe	Rest of World	
+339200	"Albania, United Kingdom"	1	Europe	Rest of World	
+352640	"Cyprus, Turkey/Ottoman Empire"	2	Middle East	Rest of World	
+439432	"Burkina Faso, Mali"	4	Africa	Sub-Saharan Africa	
+471475	"Cameroon, Nigeria"	4	Africa	Sub-Saharan Africa	
+483475	"Chad, Nigeria"	4	Africa	Sub-Saharan Africa	
+483620	"Chad, Libya"	4	Africa	Sub-Saharan Africa	https://en.wikipedia.org/wiki/Chadian%E2%80%93Libyan_conflict
+510500	"Tanzania, Uganda"	4	Africa	Sub-Saharan Africa	
+522531	"Djibouti, Eritrea"	4	Africa	Sub-Saharan Africa	https://en.wikipedia.org/wiki/Djiboutian%E2%80%93Eritrean_border_conflict
+530520	"Ethiopia, Somalia"	4	Africa	Sub-Saharan Africa	
+531530	"Eritrea, Ethiopia"	4	Africa	Sub-Saharan Africa	
+615600	"Algeria, Morocco"	4	Africa	Middle East & North Africa	
+630645	"Iran, Iraq"	2	Middle East	Middle East & North Africa	
+645690	"Iraq, Kuwait"	2	Middle East	Middle East & North Africa	
+651200	"Egypt, United Kingdom"	2	Middle East	Middle East & North Africa	
+651666	"Egypt, Israel"	2	Middle East	Middle East & North Africa	
+666652	"Israel, Syria"	2	Middle East	Middle East & North Africa	
+666663	"Israel, Jordan"	2	Middle East	Middle East & North Africa	
+678680	"North Yemen, South Yemen"	2	Middle East	Middle East & North Africa	
+700365	"Afghanistan, Russia (Soviet Union)"	3	Asia	Central & South Asia	
+710365	"China, Russia (Soviet Union)"	3	Asia	Rest of World	
+710713	"China, Taiwan"	3	Asia	Rest of World	
+710750	"China, India"	3	Asia	Central & South Asia	https://en.wikipedia.org/wiki/Sino-Indian_War
+710775	"China, Myanmar"	3	Asia	Rest of World	
+710816	"China, Vietnam"	3	Asia	Rest of World	
+731732	"North Korea, South Korea"	3	Asia	Rest of World	
+750770	"India, Pakistan"	3	Asia	Central & South Asia	
+811800	"Cambodia, Thailand"	3	Asia	Rest of World	
+811816	"Cambodia, Vietnam"	3	Asia	Rest of World	
+812800	"Laos, Thailand"	3	Asia	Rest of World	
+816817	"North Vietnam, South Vietnam"	3	Asia	Rest of World	
+820850	"Indonesia, Malaysia"	3	Asia	Rest of World	
+850210	"Indonesia, Netherlands"	3	Asia	Rest of World	
+9006452002	"Australia, Iraq, United Kingdom, United States of America"	3	Asia	Middle East & North Africa	
+6.51E+11	"Egypt, France, Israel, United Kingdom"	2	Middle East	Middle East & North Africa	
+6.52E+17	"Egypt, Iraq, Israel, Jordan, Lebanon, Syria"	2	Middle East	Middle East & North Africa	

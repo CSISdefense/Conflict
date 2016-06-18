@@ -1,0 +1,90 @@
+GWNoLoc,LocationInc,Region,RegionName,countname,RegionSummary,RegionSplit
+2,United States of America,5,Americas,1,Rest of World,Rest of World
+41,Haiti,5,Americas,1,Rest of World,Rest of World
+52,Trinidad and Tobago,5,Americas,1,Rest of World,Rest of World
+70,Mexico,5,Americas,1,Rest of World,Rest of World
+90,Guatemala,5,Americas,1,Rest of World,Rest of World
+92,El Salvador,5,Americas,1,Rest of World,Rest of World
+93,Nicaragua,5,Americas,1,Rest of World,Rest of World
+95,Panama,5,Americas,1,Rest of World,Rest of World
+100,Colombia,5,Americas,1,Rest of World,Rest of World
+101,Venezuela,5,Americas,1,Rest of World,Rest of World
+135,Peru,5,Americas,1,Rest of World,Rest of World
+150,Paraguay,5,Americas,1,Rest of World,Rest of World
+200,United Kingdom,1,Europe,1,Rest of World,Rest of World
+230,Spain,1,Europe,1,Rest of World,Rest of World
+343,"Macedonia, FYR",1,Europe,1,Rest of World,Rest of World
+344,Croatia,1,Europe,1,Rest of World,Rest of World
+345,Serbia (Yugoslavia),1,Europe,1,Rest of World,Rest of World
+346,Bosnia-Herzegovina,1,Europe,1,Rest of World,Rest of World
+359,Moldova,1,Europe,1,Rest of World,Rest of World
+360,Rumania,1,Europe,1,Rest of World,Rest of World
+365,Russia (Soviet Union),1,Europe,1,Rest of World,Rest of World
+369,Ukraine,1,Europe,1,Rest of World,Rest of World
+372,Georgia,1,Europe,1,Rest of World,Rest of World
+373,Azerbaijan,1,Europe,1,Rest of World,Rest of World
+404,Guinea-Bissau,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+432,Mali,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+433,Senegal,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+435,Mauritania,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+436,Niger,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+437,Ivory Coast,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+438,Guinea,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+450,Liberia,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+451,Sierra Leone,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+475,Nigeria,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+482,Central African Republic,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+483,Chad,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+484,Congo,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+490,DR Congo (Zaire),4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+500,Uganda,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+516,Burundi,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+517,Rwanda,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+520,Somalia,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+522,Djibouti,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+530,Ethiopia,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+531,Eritrea,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+540,Angola,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+541,Mozambique,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+570,Lesotho,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+581,Comoros,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+600,Morocco,4,Africa,1,Middle East & North Africa,Middle East & Africa
+615,Algeria,4,Africa,1,Middle East & North Africa,Middle East & Africa
+620,Libya,4,Africa,1,Middle East & North Africa,Middle East & Africa
+625,Sudan,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+626,South Sudan,4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+630,Iran,2,Middle East,1,Middle East & North Africa,Middle East & Africa
+640,Turkey,2,Middle East,1,Middle East & North Africa,Middle East & Africa
+645,Iraq,2,Middle East,1,Middle East & North Africa,Middle East & Africa
+651,Egypt,2,Middle East,1,Middle East & North Africa,Middle East & Africa
+652,Syria,2,Middle East,1,Middle East & North Africa,Middle East & Africa
+660,Lebanon,2,Middle East,1,Middle East & North Africa,Middle East & Africa
+666,Israel,2,Middle East,1,Middle East & North Africa,Middle East & Africa
+678,Yemen (North Yemen),2,Middle East,1,Middle East & North Africa,Middle East & Africa
+700,Afghanistan,3,Asia,1,Central & South Asia,Rest of World
+702,Tajikistan,3,Asia,1,Central & South Asia,Rest of World
+704,Uzbekistan,3,Asia,1,Central & South Asia,Rest of World
+710,China,3,Asia,1,Rest of World,Rest of World
+750,India,3,Asia,1,Central & South Asia,Rest of World
+770,Pakistan,3,Asia,1,Central & South Asia,Rest of World
+771,Bangladesh,3,Asia,1,Central & South Asia,Rest of World
+775,Myanmar (Burma),3,Asia,1,Rest of World,Rest of World
+780,Sri Lanka,3,Asia,1,Central & South Asia,Rest of World
+790,Nepal,3,Asia,1,Central & South Asia,Rest of World
+800,Thailand,3,Asia,1,Rest of World,Rest of World
+811,Cambodia (Kampuchea),3,Asia,1,Rest of World,Rest of World
+812,Laos,3,Asia,1,Rest of World,Rest of World
+820,Malaysia,3,Asia,1,Rest of World,Rest of World
+840,Philippines,3,Asia,1,Rest of World,Rest of World
+850,Indonesia,3,Asia,1,Rest of World,Rest of World
+910,Papua New Guinea,3,Asia,1,Rest of World,Rest of World
+"130, 135","Ecuador, Peru",5,Americas,1,Rest of World,Rest of World
+"2, 95","Panama, United States of America",5,Americas,1,Rest of World,Rest of World
+"471, 475","Cameroon, Nigeria",4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+"522, 531","Djibouti, Eritrea",4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+"530, 531","Eritrea, Ethiopia",4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+"625, 626","South Sudan, Sudan",4,Africa,1,Sub-Saharan Africa,Middle East & Africa
+"645, 690","Iraq, Kuwait",2,Middle East,1,Middle East & North Africa,Middle East & Africa
+"750, 770","India, Pakistan",3,Asia,1,Central & South Asia,Rest of World
+"800, 811","Cambodia (Kampuchea), Thailand",3,Asia,1,Rest of World,Rest of World
+"900, 645, 200, 2","Australia, Iraq, United Kingdom, United States of America","1, 2, 3, 5",Americas,1,Middle East & North Africa,Middle East & Africa
